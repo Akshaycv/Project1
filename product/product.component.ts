@@ -16,7 +16,7 @@ import { MatPaginator } from '@angular/material/paginator';
 })
 export class ProductComponent implements OnInit {
   searchText:null;
-  public ctx =this;
+  
   i:any
   t:any
   products:any
@@ -37,13 +37,13 @@ export class ProductComponent implements OnInit {
   
 
   ngOnInit(): void {
-    // this.ctx=this
+    
     this.dataSource.paginator = this.paginator;
    this.t= this.ph.getToken();
    this.http.get<any>('http://ec2-13-59-62-104.us-east-2.compute.amazonaws.com:8090/api/v1/fish/?page=1&search=').subscribe((data) =>{
     console.log(data);
     this.dataSource.data=data.results;
-    // this.products=data.results
+    
     for(var i =1;i<=data.num_pages;i++){
       this.pages.push(i)
     }
@@ -67,7 +67,7 @@ onPage(value){
     
     
    
-    // this.products=data.results;
+   
     
     
 })
@@ -80,7 +80,7 @@ onSearchMe(value){
   this.http.get<any>('http://ec2-13-59-62-104.us-east-2.compute.amazonaws.com:8090/api/v1/fish/?page=1&search='+this.searchText+'').subscribe((data) =>{
     console.log(data);
     this.dataSource.data=data.results;
-    // this.products=data.results;
+    
     
 
 })
@@ -94,8 +94,7 @@ applyFilter(){
 
 onSearchClear(){
   this.searchKey="";
-  // this.applyFilter();
-  // this.ngOnInit();
+  
 }
 
 }
