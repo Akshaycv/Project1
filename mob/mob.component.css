@@ -1,0 +1,18 @@
+example-form {
+    min-width: 50px;
+    max-width: 50px;
+    width: 20%;
+   
+  }
+  
+  .example-full-width {
+    width: 20%;
+    position: absolute;
+    top: 290px;
+    left: 490px;
+  }
+.mat-raised-button{
+      position: absolute;
+      top: 380px;
+      left: 580px;
+  }

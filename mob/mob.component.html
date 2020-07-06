@@ -1,0 +1,10 @@
+
+      <!-- <h3>haiiii</h3> -->
+      <form class="example-form" (ngSubmit)="onSubmit(mobform.value)"#mobform="ngForm">
+        <mat-form-field class="example-full-width">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput id="mob_no" name="mob_no" [ngModel]="mobno" type="tel">
+        </mat-form-field><br><br>
+        
+        <button mat-raised-button class="button">SUBMIT</button>
+        </form>
