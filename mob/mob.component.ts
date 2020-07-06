@@ -15,15 +15,13 @@ export class MobComponent implements OnInit {
 
   ngOnInit(): void {
   }
-// onSubmit(mobdata){
-//  
-//   this.onSubmit1(mobdata)
+
   
 
 
 onSubmit(mobdata){
 
-  // console.log(data)
+
     var json = {phone:mobdata.mob_no};
     console.log(json);
     this.http.post<any>('http://ec2-13-59-62-104.us-east-2.compute.amazonaws.com:8090/api/v1/user/get_otp/',json).subscribe(data => {
