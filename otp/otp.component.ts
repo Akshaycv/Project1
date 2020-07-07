@@ -15,7 +15,7 @@ export class OtpComponent implements OnInit {
   constructor(public ph:PhoneService,public http : HttpClient,public router: Router) {
     
     
-    // console.log(this.phone)
+   
    }
 
   ngOnInit(): void {
@@ -26,7 +26,7 @@ export class OtpComponent implements OnInit {
 
   onSubmit(otpdata){
 
-    // console.log(data)
+   
       var json = {username:this.phone,password:otpdata.otp_no};
       console.log(json);
       this.http.post<any>('http://ec2-13-59-62-104.us-east-2.compute.amazonaws.com:8090/api/v1/user/get_access_token/',json).subscribe(data => {
