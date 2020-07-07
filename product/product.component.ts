@@ -88,14 +88,7 @@ onSearchMe(value){
 
 
 }
-applyFilter(){
-  this.dataSource.filter=this.searchKey.trim().toLowerCase();
-}
 
-onSearchClear(){
-  this.searchKey="";
-  
-}
 
 }
 
